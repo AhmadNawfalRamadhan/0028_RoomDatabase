@@ -27,7 +27,7 @@ androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 
-compose-icons = {module = "androidx.compose.mateial:material-icons-extended"}
+compose-icons = {module = "androidx.compose.material:material-icons-extended"}
 room-runtime = {module = "androidx.room:room-runtime", version.ref = "room"}
 room-ktx = {module = "androidx.room:room-ktx", version.ref = "room"}
 room-compiler = {module = "androidx.room:room-compiler", version.ref = "room"}
