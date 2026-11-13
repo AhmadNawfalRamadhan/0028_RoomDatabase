@@ -1,17 +1,28 @@
 package com.example.activity7.viewmodel
 
-import android.app.Application
-import com.example.activity7.repositori.ContainerApp
-import com.example.activity7.repositori.ContainerDataApp
+import androidx.lifecycle.viewmodel.CreationExtras
+import androidx.lifecycle.viewmodel.initializer
+import androidx.lifecycle.viewmodel.viewModelFactory
+import com.example.activity7.AplikasiSiswa
+import androidx.lifecycle.ViewModelProvider
 
-class AplikasiSiswa : Application() {
-    /**
-     * AppContainer instance digunakan oleh kelas-kelas lainnya untuk mendapatkan dependensi.
-     */
-    lateinit var container: ContainerApp
+object PenyediaViewModel {
+    val Factory = viewModelFactory {
 
-    override fun onCreate() {
-        super.onCreate()
-        container = ContainerDataApp(this)
+        initializer {
+            HomeViewModel(aplikasiSiswa().container.repositoriSiswa)
+        }
+
+        initializer {
+            EntryViewModel(aplikasiSiswa().container.repositoriSiswa)
+        }
+
     }
 }
+
+/**
+ * Fungsi ekstensi query untuk objek [Application] dan mengembalikan sebuah instance dari
+ *  [AplikasiSiswa].
+ */
+fun CreationExtras.aplikasiSiswa(): AplikasiSiswa =
+    (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as AplikasiSiswa)
