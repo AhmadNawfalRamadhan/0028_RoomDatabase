@@ -16,8 +16,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.activity7.R
-import com.example.activity7.view.DestinasiEntry
-import com.example.activity7.view.DestinasiHome
+import com.example.activity7.uicontroller.DestinasiEntry
+import com.example.activity7.uicontroller.DestinasiHome
 import com.example.activity7.view.EntrySiswaScreen
 import com.example.activity7.view.HomeScreen
 
