@@ -25,7 +25,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.activity7.R
-import com.example.activity7.DestinasiEntry
+import com.example.activity7.uicontroller.DestinasiEntry
 import com.example.activity7.uicontroller.DestinasiNavigasi
 import com.example.activity7.uicontroller.SiswaTopAppBar
 import com.example.activity7.viewmodel.DetailSiswa
