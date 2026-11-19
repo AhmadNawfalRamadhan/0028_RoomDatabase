@@ -25,8 +25,8 @@ class DetailViewModel (
                 DetailSiswaUiState(detailSiswa = it.toDetailSiswa())
             }.stateIn(
                 scope = viewModelScope,
-                started = SharingStarted.WhileSubscribed(TIMEOUT_MILLIS)
-                InitialValue = DetailSiswaUiState()
+                started = SharingStarted.WhileSubscribed(TIMEOUT_MILLIS),
+                initialValue = DetailSiswaUiState()
             )
     suspend fun  deleteSiswa(){
         repositoriSiswa.deleteSiswa(uiDetailState.value.detailSiswa.toSiswa())
